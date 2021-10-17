@@ -1,0 +1,13 @@
+setup.py
+bnsblock/__init__.py
+bnsblock/bnsblock.py
+bnsblock/static/README.txt
+bnsblock/static/css/bnsblock.css
+bnsblock/static/html/bnsblock.html
+bnsblock/static/js/src/bnsblock.js
+bnsblock_xblock.egg-info/PKG-INFO
+bnsblock_xblock.egg-info/SOURCES.txt
+bnsblock_xblock.egg-info/dependency_links.txt
+bnsblock_xblock.egg-info/entry_points.txt
+bnsblock_xblock.egg-info/requires.txt
+bnsblock_xblock.egg-info/top_level.txt

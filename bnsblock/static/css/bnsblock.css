@@ -1,0 +1,9 @@
+/* CSS for BnsXBlock */
+
+.bnsblock_block .count {
+    font-weight: bold;
+}
+
+.bnsblock_block p {
+    cursor: pointer;
+}
