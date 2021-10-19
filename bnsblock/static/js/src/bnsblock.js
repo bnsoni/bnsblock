@@ -15,8 +15,19 @@ function BnsXBlock(runtime, element) {
 
     $('#get_num').click(function(eventObject) {
 
-        $.get("http://localhost:8000/api/interview/", function(data, status){
-            alert("Magic Number: " + /*JSON.stringify(data)*/ data[0].greeting + "\nStatus: " + status);
+        //$.get("http://localhost:8000/api/interview/", function(data, status){
+        //    alert("Magic Number: " + /*JSON.stringify(data)*/ data[0].greeting + "\nStatus: " + status);
+        //});
+
+        var token = document.getElementById('token').value;
+
+        $.ajax({
+            type: "GET",
+            headers: {'Authorization': 'Bearer '+token},
+            url: "http://localhost:8000/api/interview/",
+            success: function(data, status){
+                alert("Magic Number: " + /*JSON.stringify(data)*/ data[0].greeting + "\nStatus: " + status);
+            }
         });
 
 
@@ -27,11 +38,13 @@ function BnsXBlock(runtime, element) {
         var mObject = new Object();
         mObject.id = 1;
         mObject.greeting = document.getElementById('magic_num').value;
+        var token = document.getElementById('token').value;
 
         //alert(JSON.stringify(mObject));
 
         $.ajax({
             type: "PUT",
+            headers: {'Authorization': 'Bearer '+token},
             url: "http://localhost:8000/api/interview/update/1/",
             data: mObject,
             success: function(data, status){
